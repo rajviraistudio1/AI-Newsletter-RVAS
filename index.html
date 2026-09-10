@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raj Vir AI Studio — Stay Ahead in AI | Weekly Intelligence & Deep Dives</title>
+  <meta name="description" content="Stay ahead in artificial intelligence with Raj Vir AI Studio. High-signal breakdowns, production agent architectures, and weekly AI breakthroughs delivered free every Tuesday.">
+  <meta name="keywords" content="AI newsletter, artificial intelligence, agentic AI, LLMs, prompt engineering, machine learning, Raj Vir AI Studio">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Raj Vir AI Studio — Stay Ahead in AI">
+  <meta property="og:description" content="Weekly high-signal AI intelligence, real-world agent architectures, and cutting-edge breakthroughs.">
+  <meta name="theme-color" content="#07090e">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Glowing Mesh Background -->
+  <div class="bg-glow-container" aria-hidden="true">
+    <div class="glow-orb-1"></div>
+    <div class="glow-orb-2"></div>
+    <div class="glow-orb-3"></div>
+  </div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <!-- Navigation Bar -->
+  <header class="site-header" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo" id="brand-logo" aria-label="Raj Vir AI Studio Homepage">
+        <div class="brand-icon">
+          <!-- Sparkle / Neural Spark SVG -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+          </svg>
+        </div>
+        <span>Raj Vir <span class="gradient-text">AI Studio</span></span>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="#why-subscribe">Why Subscribe</a></li>
+          <li><a href="#whats-inside">What's Inside</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle Button -->
+        <button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Toggle light and dark theme" title="Toggle theme">
+          <span class="theme-icon-sun" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </span>
+          <span class="theme-icon-moon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </span>
+        </button>
+
+        <button class="btn btn-secondary btn-sm" id="nav-preview-trigger" type="button">
+          <span>Read Preview</span>
+        </button>
+        <a href="#hero-subscribe" class="btn btn-primary" id="nav-cta-btn">
+          <span>Subscribe Free</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         Hero Section
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-content">
+          <!-- Floating Badge -->
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            <span>Edition #49 drops this Tuesday · 15,000+ Readers</span>
+          </div>
+
+          <!-- Headline -->
+          <h1 class="hero-title">
+            Stay Ahead in <span class="gradient-text">AI</span>
+          </h1>
+
+          <!-- Short Description -->
+          <p class="hero-description">
+            Cut through the marketing noise. Get weekly high-signal breakdowns, production agent architectures, prompt recipes, and commercial AI intelligence delivered straight to your inbox.
+          </p>
+
+          <!-- Subscription Form -->
+          <div class="subscribe-form-wrapper" id="hero-subscribe">
+            <form class="newsletter-form" id="hero-newsletter-form" novalidate>
+              <div class="input-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <input 
+                type="email" 
+                id="hero-email-input" 
+                name="email" 
+                placeholder="Enter your work or personal email..." 
+                required
+                autocomplete="email"
+                aria-label="Email address for subscription"
+              >
+              <button type="submit" class="btn btn-primary btn-submit" id="hero-submit-btn">
+                <span class="btn-text">Subscribe Now</span>
+                <span class="btn-spinner" aria-hidden="true"></span>
+              </button>
+            </form>
+
+            <!-- Success State Banner -->
+            <div class="subscribe-success-card" id="hero-success-state" role="alert">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span>Welcome to Raj Vir AI Studio! Check your inbox for the welcome issue.</span>
+            </div>
+          </div>
+
+          <!-- Proof / Trust Indicators -->
+          <div class="hero-proof">
+            <div class="avatar-stack">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=64&auto=format&fit=crop&q=80" alt="Subscriber avatar">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=64&auto=format&fit=crop&q=80" alt="Subscriber avatar">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=64&auto=format&fit=crop&q=80" alt="Subscriber avatar">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=64&auto=format&fit=crop&q=80" alt="Subscriber avatar">
+            </div>
+            <div class="proof-rating">
+              <span class="stars">★★★★★</span>
+              <span><strong>5.0</strong> from 450+ tech leaders</span>
+            </div>
+            <div class="guarantee-note">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <span>100% Free · No spam · 1-click unsubscribe</span>
+            </div>
+          </div>
+
+          <!-- Interactive Newsletter Issue Preview Card -->
+          <div class="hero-visual-card" id="hero-card-preview">
+            <div class="card-topbar">
+              <div class="window-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="issue-pill">EDITION #48 · SPECIAL DEEP DIVE</div>
+              <div style="width: 50px;"></div>
+            </div>
+            
+            <div class="card-content-preview">
+              <div class="issue-meta">
+                <span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  5 min read
+                </span>
+                <span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17.5" y1="15" x2="9" y2="15"></line></svg>
+                  Architecture & Code
+                </span>
+                <span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  Featured by 800+ builders
+                </span>
+              </div>
+
+              <h3>Building Resilient Multi-Agent Workflows in Production</h3>
+              <p>
+                Why 70% of autonomous agent architectures fail when exposed to edge-case hallucinations, and how deterministic state graphs with dynamic rollback protocols solve it.
+              </p>
+
+              <div class="code-snippet-preview">
+                <span class="cm"># Production Graph Orchestration snippet</span><br>
+                <span class="kw">from</span> rvas_agents <span class="kw">import</span> <span class="fn">WorkflowGraph</span>, <span class="fn">AgentNode</span><br>
+                graph = <span class="fn">WorkflowGraph</span>(eval_threshold=<span class="str">0.92</span>)<br>
+                graph.<span class="fn">add_guardrail</span>(<span class="str">"hallucination_filter"</span>, strict=<span class="kw">True</span>)<br>
+                response = graph.<span class="fn">execute_with_rollback</span>(task)
+              </div>
+
+              <div class="preview-action">
+                <span class="read-time">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                  Previewing full issue breakdown
+                </span>
+                <button class="btn btn-secondary btn-sm" id="hero-read-sample-btn" type="button">
+                  <span>Read Full Edition Sample →</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Metrics Ribbon / Stats Strip
+         ========================================================================== -->
+    <section class="stats-strip" aria-label="Key metrics">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number">15,000+</div>
+            <div class="stat-label">Engineers & Founders</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">44.2%</div>
+            <div class="stat-label">Average Open Rate</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">120+</div>
+            <div class="stat-label">Editions Published</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">5 Min</div>
+            <div class="stat-label">Curated Weekly Read</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section: Why Subscribe (Value Proposition)
+         ========================================================================== -->
+    <section class="why-section" id="why-subscribe">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">High Signal, Zero Noise</div>
+          <h2>Why Elite AI Builders Read <span class="gradient-text">Raj Vir AI Studio</span></h2>
+          <p>
+            The artificial intelligence landscape moves at blinding speed. We distill hundreds of arXiv papers, model weights, and framework releases into clear, actionable engineering intelligence.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Bento Card 1 -->
+          <div class="bento-card bento-span-2">
+            <div class="card-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <h3>Filter Hype from True Technological Shifts</h3>
+            <p>
+              Marketing departments claim artificial general intelligence every Tuesday. We review the raw benchmarks, analyze memory constraints, inspect loss curves, and tell you whether a breakthrough is real or merely clever prompt engineering.
+            </p>
+            <div class="pill-list">
+              <span class="pill-item">Paper Breakdowns</span>
+              <span class="pill-item">Independent Benchmarks</span>
+              <span class="pill-item">Compute Economics</span>
+              <span class="pill-item">No Sponsored Bias</span>
+            </div>
+          </div>
+
+          <!-- Bento Card 2 -->
+          <div class="bento-card">
+            <div class="card-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3>Production-Ready Code Recipes</h3>
+            <p>
+              Get battle-tested system prompt templates, tool-calling schemas, and evaluation scripts you can drop directly into your tech stack.
+            </p>
+            <div class="pill-list">
+              <span class="pill-item">LangGraph</span>
+              <span class="pill-item">LlamaIndex</span>
+              <span class="pill-item">vLLM & Ollama</span>
+            </div>
+          </div>
+
+          <!-- Bento Card 3 -->
+          <div class="bento-card">
+            <div class="card-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <h3>Commercial Impact & AI ROI</h3>
+            <p>
+              How leading startups and enterprises are actually monetizing generative AI, lowering token inference overhead, and building defensible moats.
+            </p>
+            <div class="pill-list">
+              <span class="pill-item">Inference Cost Reductions</span>
+              <span class="pill-item">SaaS AI Moats</span>
+            </div>
+          </div>
+
+          <!-- Bento Card 4 -->
+          <div class="bento-card bento-span-2">
+            <div class="card-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+              </svg>
+            </div>
+            <h3>The Weekly AI Radar</h3>
+            <p>
+              Discover open-weights models, cutting-edge GitHub repositories, and developer utilities days before they trend on social media and Hacker News. We test them first so you don't waste time on broken repos.
+            </p>
+            <div class="pill-list">
+              <span class="pill-item">Curated GitHub Repos</span>
+              <span class="pill-item">Local LLM Optimizations</span>
+              <span class="pill-item">Agentic Tools</span>
+              <span class="pill-item">Vector DB Patterns</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section: What Kind of Content You Receive
+         ========================================================================== -->
+    <section class="content-section" id="whats-inside">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Curated Taxonomy</div>
+          <h2>What You Receive Every Tuesday</h2>
+          <p>
+            Structured for maximum comprehension in minimum time. Every edition follows a four-part framework designed for rapid execution.
+          </p>
+        </div>
+
+        <div class="content-pillars-grid">
+          <!-- Pillar 1 -->
+          <div class="pillar-card">
+            <div class="pillar-header">
+              <span class="pillar-badge">PART 01</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <h3>The Deep Dive</h3>
+            <p>
+              A single comprehensive breakdown of a breakthrough system architecture, agent mechanism, or real-world enterprise deployment.
+            </p>
+            <ul class="pillar-highlights">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Architectural diagrams and state machine breakdowns</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Cost vs. latency vs. accuracy trade-off matrices</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Real pitfalls encountered in production scale</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="pillar-card">
+            <div class="pillar-header">
+              <span class="pillar-badge">PART 02</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+            </div>
+            <h3>Prompt & Agent Laboratory</h3>
+            <p>
+              Practical code recipes and system prompts designed to eliminate hallucination, streamline tool calling, and manage context windows.
+            </p>
+            <ul class="pillar-highlights">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Copy-pasteable JSON schemas & structured output specs</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Automated evaluation test suites (Evals)</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Few-shot chain-of-thought optimization patterns</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="pillar-card">
+            <div class="pillar-header">
+              <span class="pillar-badge">PART 03</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><circle cx="12" cy="12" r="2"></circle><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"></path></svg>
+            </div>
+            <h3>The Weekly Radar</h3>
+            <p>
+              The top 5 new tools, open-weights foundation models, and datasets worth your attention, tested and scored for utility.
+            </p>
+            <ul class="pillar-highlights">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Hand-tested open source repositories</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Quantization & inference benchmarks</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Direct GitHub and HuggingFace links</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="pillar-card">
+            <div class="pillar-header">
+              <span class="pillar-badge">PART 04</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3>Builder Q&A & Tactical Insights</h3>
+            <p>
+              Direct insights from engineers scaling AI products. Lessons from the trenches on hiring, tooling, GPU orchestration, and market positioning.
+            </p>
+            <ul class="pillar-highlights">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Real production case studies from top startups</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Reader-submitted architectural queries answered</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Actionable takeaways you can implement immediately</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section: How The Newsletter Works
+         ========================================================================== -->
+    <section class="how-section" id="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Simple & Seamless</div>
+          <h2>How It Works</h2>
+          <p>
+            Zero friction, zero paywalls. A reliable cadence built for busy technical leaders.
+          </p>
+        </div>
+
+        <div class="steps-timeline">
+          <!-- Step 1 -->
+          <div class="step-card">
+            <div class="step-bubble">01</div>
+            <h3>Subscribe in 10 Seconds</h3>
+            <p>
+              Drop your email address into any form on this page. No passwords, no credit card, no complex verification hoops.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card">
+            <div class="step-bubble">02</div>
+            <h3>Tuesday Morning Dispatch</h3>
+            <p>
+              Every Tuesday at 7:00 AM EST, an ultra-crisp, 5-minute read lands in your inbox. Written with razor-sharp editorial standards.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-card">
+            <div class="step-bubble">03</div>
+            <h3>Build, Ship & Lead</h3>
+            <p>
+              Apply practical agent frameworks, improve your engineering workflows, and make informed architectural decisions with confidence.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section: Reader Testimonials
+         ========================================================================== -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Reader Feedback</div>
+          <h2>Trusted by AI Practitioners</h2>
+          <p>
+            Here is what engineering leaders, research scientists, and tech founders have to say about Raj Vir AI Studio.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <p class="testimonial-quote">
+              "Raj Vir AI Studio is one of the only newsletters I read top-to-bottom every week. The code snippets on agent graph error recovery saved our engineering team weeks of trial and error."
+            </p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Sarah Chen" class="author-avatar">
+              <div class="author-info">
+                <h4>Dr. Sarah Chen</h4>
+                <p>Head of AI Research · NeuroScale</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <p class="testimonial-quote">
+              "Most newsletters regurgitate Twitter hot takes. Raj Vir AI Studio actually dives into the mechanics of latency, context optimization, and model evaluation. Mandatory reading for our entire team."
+            </p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Marcus Vance" class="author-avatar">
+              <div class="author-info">
+                <h4>Marcus Vance</h4>
+                <p>CTO & Co-Founder · Synthetix Systems</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <p class="testimonial-quote">
+              "The curated tool radar is gold. We replaced two expensive proprietary API dependencies with open-weights equivalents Raj highlighted in Edition #34, reducing inference bills by 60%."
+            </p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80" alt="David Sterling" class="author-avatar">
+              <div class="author-info">
+                <h4>David Sterling</h4>
+                <p>Staff Machine Learning Engineer · Apex AI</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section: FAQ Accordion
+         ========================================================================== -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Common Questions</div>
+          <h2>Frequently Asked Questions</h2>
+          <p>
+            Everything you need to know about the publication and cadence.
+          </p>
+        </div>
+
+        <div class="faq-container">
+          <!-- FAQ 1 -->
+          <div class="faq-item active">
+            <button class="faq-question" type="button">
+              <span>Is Raj Vir AI Studio completely free?</span>
+              <span class="faq-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, 100% free. Every Tuesday edition, code sample, and breakdown is delivered directly to your inbox at zero cost. We believe high-signal AI engineering insights should be accessible to builders worldwide.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>What level of technical expertise is required?</span>
+              <span class="faq-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <p>Our content is designed for software developers, AI practitioners, technical founders, and product managers building with LLMs. While we include code snippets and architectural diagrams, each issue is structured so both hands-on coders and strategic leaders get immense value.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>How often will I receive emails?</span>
+              <span class="faq-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <p>Exactly once per week on Tuesday mornings at 7:00 AM EST. On rare occasions, we may dispatch an urgent flash breakdown if a seminal model or fundamental security vulnerability is announced. Zero spam, ever.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Can I suggest topics or submit tools to be featured?</span>
+              <span class="faq-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <p>Absolutely. Every newsletter email comes from an unmonitored-free inbox where you can hit reply directly to reach our editorial team. We regularly feature reader questions, open-source projects, and community benchmarks.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>How easy is it to unsubscribe?</span>
+              <span class="faq-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <p>Every single edition contains a simple, instant one-click unsubscribe link in the footer. If you ever feel the content is no longer valuable, you can leave with a single click—no questions asked.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section: Final Call-To-Action (CTA)
+         ========================================================================== -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-box">
+          <div class="section-tag" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: #fff;">
+            Join 15,000+ AI Leaders
+          </div>
+          <h2>Never Fall Behind the AI Curve Again</h2>
+          <p>
+            Get the unfair advantage. Subscribe to Raj Vir AI Studio today and master the next wave of artificial intelligence.
+          </p>
+
+          <div class="subscribe-form-wrapper" style="margin-bottom: 0;">
+            <form class="newsletter-form" id="cta-newsletter-form" novalidate>
+              <div class="input-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <input 
+                type="email" 
+                id="cta-email-input" 
+                name="email" 
+                placeholder="Enter your email address..." 
+                required
+                autocomplete="email"
+                aria-label="Email address for subscription"
+              >
+              <button type="submit" class="btn btn-primary btn-submit" id="cta-submit-btn">
+                <span class="btn-text">Subscribe Now</span>
+                <span class="btn-spinner" aria-hidden="true"></span>
+              </button>
+            </form>
+
+            <div class="subscribe-success-card" id="cta-success-state" role="alert">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              <span>You're officially on the list! First issue arriving this Tuesday.</span>
+            </div>
+          </div>
+
+          <div class="cta-guarantee">
+            <span>🔒 Strict Privacy</span>
+            <span>⚡ No spam ever</span>
+            <span>👋 1-click unsubscribe</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Site Footer
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-brand">
+          <a href="#" class="brand-logo" aria-label="Raj Vir AI Studio Homepage">
+            <div class="brand-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+              </svg>
+            </div>
+            <span>Raj Vir <span class="gradient-text">AI Studio</span></span>
+          </a>
+          <p>
+            The weekly intelligence briefing for builders, researchers, and technical leaders shaping the future of artificial intelligence.
+          </p>
+          <div class="social-links">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter / X">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#why-subscribe">Why Subscribe</a></li>
+            <li><a href="#whats-inside">What's Inside</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Topics -->
+        <div class="footer-col">
+          <h4>Pillars</h4>
+          <ul class="footer-links">
+            <li><a href="#whats-inside">Autonomous Agents</a></li>
+            <li><a href="#whats-inside">Prompt Engineering</a></li>
+            <li><a href="#whats-inside">Open-Weights Models</a></li>
+            <li><a href="#whats-inside">AI Infrastructure</a></li>
+            <li><a href="#whats-inside">Commercial ROI</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Legal & Contact -->
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:contact@rajviraistudio.com">Editorial Contact</a></li>
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#terms">Terms of Service</a></li>
+            <li><a href="#unsubscribe">Unsubscribe Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Raj Vir AI Studio. All rights reserved. Crafted for the AI frontier.</p>
+        <p>Zero sponsored bias · Independent engineering analysis</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Interactive Sample Newsletter Edition Modal
+       ========================================================================== -->
+  <div class="modal-overlay" id="sample-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <div class="issue-pill">SAMPLE PREVIEW</div>
+          <span style="font-size: 0.85rem; color: var(--text-muted);">Edition #48</span>
+        </div>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-newsletter-brand">
+          <div>
+            <h4 style="font-size: 1.15rem; color: #fff;">Raj Vir AI Studio</h4>
+            <span style="font-size: 0.82rem; color: var(--text-muted);">Weekly Dispatch · Delivered Tuesday, 7:00 AM EST</span>
+          </div>
+          <span style="font-size: 0.85rem; color: #38bdf8; font-weight: 600;">5-min read</span>
+        </div>
+
+        <article class="newsletter-article">
+          <h2 id="modal-title">Autonomous Agents in Production: Beyond the Toy Demos</h2>
+          
+          <p>
+            Over the past six months, we've interviewed over 40 engineering teams deploying agentic LLM systems in enterprise environments. One brutal realization became unanimous: <em>unconstrained tool-calling loops inevitably drift into cascade failure modes.</em>
+          </p>
+
+          <div class="newsletter-highlight-box">
+            <p><strong>Key Insight:</strong> Never allow an LLM agent to recursively invoke state mutations without a deterministic finite state machine (FSM) boundary and an external evaluation validator.</p>
+          </div>
+
+          <h4 style="color: #f1f5f9; margin-top: 1.5rem; margin-bottom: 0.75rem;">1. The 3 Golden Rules of Resilient Agents</h4>
+          <p>
+            1. <strong>Strict Output Validation:</strong> Force structured JSON schema with Pydantic / Zod before the payload reaches your database.<br>
+            2. <strong>Rollback Checkpoints:</strong> Implement transactional snapshots prior to external API executions.<br>
+            3. <strong>Context Pruning:</strong> Summarize tool histories into memory scratchpads rather than feeding 30,000 tokens of raw stacktraces.
+          </p>
+
+          <div class="code-snippet-preview" style="margin-top: 1.25rem;">
+            <span class="cm"># The Golden Pattern: Deterministic State Verification</span><br>
+            <span class="kw">class</span> <span class="fn">VerifiedAgentExecutor</span>:<br>
+            &nbsp;&nbsp;<span class="kw">def</span> <span class="fn">execute_step</span>(self, state, tool_call):<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;checkpoint = state.<span class="fn">create_snapshot</span>()<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">try</span>:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result = self.tools.<span class="fn">dispatch</span>(tool_call)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">return</span> self.validator.<span class="fn">assert_valid</span>(result)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">except</span> ValidationAnomaly:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;state.<span class="fn">restore_snapshot</span>(checkpoint)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">return</span> self.<span class="fn">fallback_routine</span>()
+          </div>
+
+          <h4 style="color: #f1f5f9; margin-top: 1.5rem; margin-bottom: 0.75rem;">2. The Weekly Radar: 3 Gems</h4>
+          <p>
+            • <strong>vLLM v0.6:</strong> 2.4x throughput upgrade with flash-attention 3 support.<br>
+            • <strong>AgentScope:</strong> Lightweight multi-agent message framework designed for high-concurrency simulation.<br>
+            • <strong>Outlines:</strong> The de facto standard for guaranteeing regex and JSON adherence in local open-weights models.
+          </p>
+        </article>
+      </div>
+
+      <div class="modal-footer">
+        <span style="color: var(--text-secondary); font-size: 0.9rem;">
+          Enjoyed this preview? Join 15,000+ builders every Tuesday.
+        </span>
+        <button class="btn btn-primary btn-sm" id="modal-subscribe-shortcut">
+          <span>Subscribe Now (Free)</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
