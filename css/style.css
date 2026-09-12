@@ -514,18 +514,36 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-muted);
 }
 
-.newsletter-form .btn-submit {
+.newsletter-form .btn-submit,
+#modal-subscribe-shortcut {
   min-width: 150px;
-  font-weight: 600;
+  background: linear-gradient(135deg, #facc15 0%, #eab308 100%);
+  color: #090d16;
+  font-weight: 700;
+  border: 1px solid rgba(254, 240, 138, 0.4);
+  box-shadow: 0 4px 20px rgba(234, 179, 8, 0.38);
   position: relative;
+}
+
+.newsletter-form .btn-submit:hover,
+#modal-subscribe-shortcut:hover {
+  background: linear-gradient(135deg, #fde047 0%, #ca8a04 100%);
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 26px rgba(234, 179, 8, 0.55);
+}
+
+.newsletter-form .btn-submit:active,
+#modal-subscribe-shortcut:active {
+  transform: translateY(0);
 }
 
 .btn-submit .btn-spinner {
   display: none;
   width: 18px;
   height: 18px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-top-color: #fff;
+  border: 2px solid rgba(9, 13, 22, 0.3);
+  border-top-color: #090d16;
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
