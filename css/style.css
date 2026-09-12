@@ -1316,6 +1316,22 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-muted);
 }
 
+.footer-admin-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.78rem;
+  opacity: 0.5;
+  transition: opacity var(--transition-fast), color var(--transition-fast);
+}
+
+.footer-admin-link:hover {
+  opacity: 1;
+  color: var(--text-secondary);
+}
+
 /* ==========================================================================
    Newsletter Preview Modal
    ========================================================================== */

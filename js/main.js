@@ -101,8 +101,37 @@ function initNavbar() {
 }
 
 /* ==========================================================================
-   2. Subscription Form Handling & Celebratory Confetti
+   2. Supabase Client & Subscription Form Handling
    ========================================================================== */
+let supabaseClient = null;
+
+function getSupabaseClient() {
+  if (supabaseClient) return supabaseClient;
+
+  // Check if @supabase/supabase-js is loaded from CDN
+  if (typeof window.supabase === 'undefined' || !window.supabase.createClient) {
+    return null;
+  }
+
+  const config = window.SUPABASE_CONFIG;
+  if (!config || !config.url || !config.anonKey) {
+    return null;
+  }
+
+  // Check if still using placeholder values
+  if (config.url.includes('YOUR_PROJECT_ID') || config.anonKey.includes('YOUR_SUPABASE_ANON_KEY')) {
+    return null;
+  }
+
+  try {
+    supabaseClient = window.supabase.createClient(config.url, config.anonKey);
+    return supabaseClient;
+  } catch (err) {
+    console.error('[RVAS] Failed to initialize Supabase client:', err);
+    return null;
+  }
+}
+
 function initForms() {
   const heroForm = document.getElementById('hero-newsletter-form');
   const ctaForm = document.getElementById('cta-newsletter-form');
@@ -115,6 +144,7 @@ function setupForm(form, prefix) {
   const emailInput = document.getElementById(`${prefix}-email-input`);
   const submitBtn = document.getElementById(`${prefix}-submit-btn`);
   const successCard = document.getElementById(`${prefix}-success-state`);
+  const btnText = submitBtn ? submitBtn.querySelector('.btn-text') : null;
 
   // Check if previously subscribed in localStorage
   try {
@@ -123,14 +153,14 @@ function setupForm(form, prefix) {
       emailInput.value = savedEmail;
     }
   } catch (e) {
-    // localStorage might be unavailable in some iframe sandboxes
+    // localStorage might be unavailable in some private browser sandboxes
   }
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const email = emailInput ? emailInput.value.trim() : '';
+    const rawEmail = emailInput ? emailInput.value.trim() : '';
 
-    if (!validateEmail(email)) {
+    if (!validateEmail(rawEmail)) {
       showToast('Please enter a valid email address.', 'error');
       if (emailInput) {
         emailInput.focus();
@@ -140,37 +170,72 @@ function setupForm(form, prefix) {
       return;
     }
 
+    const email = rawEmail.toLowerCase();
+
     // Enter loading state
     submitBtn.classList.add('loading');
     submitBtn.disabled = true;
 
-    // Simulate server response delay
-    setTimeout(() => {
-      submitBtn.classList.remove('loading');
-      submitBtn.disabled = false;
+    try {
+      const client = getSupabaseClient();
 
-      // Show success card and hide/reset form
-      if (successCard) {
-        successCard.classList.add('active');
+      if (!client) {
+        // Supabase credentials not set yet (preview / development fallback)
+        await new Promise(resolve => setTimeout(resolve, 600));
+
+        if (successCard) successCard.classList.add('active');
+        try { localStorage.setItem('rvas_subscribed_email', email); } catch (err) {}
+        triggerConfetti();
+        if (btnText) btnText.textContent = 'Subscribed ✓';
+        showToast(`Preview mode: ${email} recorded. Connect your Supabase project in js/config.js for live database storage.`, 'info');
+        return;
       }
 
-      // Persist in localStorage
-      try {
-        localStorage.setItem('rvas_subscribed_email', email);
-      } catch (err) {}
+      // Live Supabase Database Insertion
+      const { data, error } = await client
+        .from('subscribers')
+        .insert([
+          {
+            email: email,
+            source: prefix === 'hero' ? 'hero_section' : 'cta_section'
+          }
+        ]);
 
-      // Trigger celebratory confetti burst
+      if (error) {
+        // Detect unique constraint violation (duplicate email)
+        const isDuplicate = error.code === '23505' ||
+          (error.message && error.message.toLowerCase().includes('duplicate')) ||
+          (error.message && error.message.toLowerCase().includes('unique')) ||
+          (error.details && error.details.toLowerCase().includes('already exists'));
+
+        if (isDuplicate) {
+          if (successCard) successCard.classList.add('active');
+          if (btnText) btnText.textContent = 'Subscribed ✓';
+          try { localStorage.setItem('rvas_subscribed_email', email); } catch (err) {}
+          triggerConfetti();
+          showToast(`You're already subscribed with ${email}! Next edition arriving Tuesday.`, 'info');
+          return;
+        }
+
+        console.error('[RVAS] Supabase subscription error:', error);
+        showToast(error.message || 'Unable to complete subscription at this time. Please try again.', 'error');
+        return;
+      }
+
+      // Successful live subscription
+      if (successCard) successCard.classList.add('active');
+      if (btnText) btnText.textContent = 'Subscribed ✓';
+      try { localStorage.setItem('rvas_subscribed_email', email); } catch (err) {}
       triggerConfetti();
-
-      // Show toast notification
       showToast(`Welcome aboard! Confirmation sent to ${email}`, 'success');
 
-      // Update button text to Subscribed!
-      const btnText = submitBtn.querySelector('.btn-text');
-      if (btnText) {
-        btnText.textContent = 'Subscribed ✓';
-      }
-    }, 700);
+    } catch (networkErr) {
+      console.error('[RVAS] Unexpected error:', networkErr);
+      showToast('Network error encountered. Please check your connection and try again.', 'error');
+    } finally {
+      submitBtn.classList.remove('loading');
+      submitBtn.disabled = false;
+    }
   });
 }
 
@@ -344,9 +409,14 @@ function showToast(message, type = 'info') {
   const toast = document.createElement('div');
   toast.className = 'toast';
 
-  const iconSvg = type === 'success'
-    ? `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>`
-    : `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>`;
+  let iconSvg;
+  if (type === 'success') {
+    iconSvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>`;
+  } else if (type === 'error') {
+    iconSvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>`;
+  } else {
+    iconSvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>`;
+  }
 
   toast.innerHTML = `${iconSvg}<span>${message}</span>`;
   container.appendChild(toast);
@@ -356,5 +426,5 @@ function showToast(message, type = 'info') {
     toast.style.opacity = '0';
     toast.style.transform = 'translateX(20px)';
     setTimeout(() => toast.remove(), 300);
-  }, 4000);
+  }, 4500);
 }

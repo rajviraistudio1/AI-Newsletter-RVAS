@@ -6,6 +6,9 @@
 *.pem
 *.key
 
+# Supabase configuration (contains API credentials)
+js/config.js
+
 # Operating system files
 .DS_Store
 Thumbs.db

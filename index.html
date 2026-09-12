@@ -783,8 +783,14 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 Raj Vir AI Studio. All rights reserved. Crafted for the AI frontier.</p>
-        <p>Zero sponsored bias · Independent engineering analysis</p>
+        <div>
+          <p>&copy; 2026 Raj Vir AI Studio. All rights reserved. Crafted for the AI frontier.</p>
+          <p>Zero sponsored bias · Independent engineering analysis</p>
+        </div>
+        <a href="admin.html" class="footer-admin-link" title="Admin Dashboard">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          Admin
+        </a>
       </div>
     </div>
   </footer>
@@ -867,7 +873,13 @@
   <!-- Toast Container -->
   <div class="toast-container" id="toast-container" aria-live="polite"></div>
 
-  <!-- JavaScript -->
+  <!-- Supabase Client Library (v2) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- Supabase Configuration (Git-ignored) -->
+  <script src="js/config.js"></script>
+
+  <!-- Main Application JavaScript -->
   <script src="js/main.js"></script>
 </body>
 </html>
