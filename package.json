@@ -1,0 +1,18 @@
+{
+  "name": "rvas-newsletter",
+  "version": "1.0.0",
+  "description": "Raj Vir AI Studio — Intelligence Newsletter Landing Page and Admin Dashboard",
+  "private": true,
+  "scripts": {
+    "build": "node build.js",
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "ai",
+    "newsletter",
+    "supabase",
+    "vercel"
+  ],
+  "author": "Raj Vir AI Studio",
+  "license": "MIT"
+}
